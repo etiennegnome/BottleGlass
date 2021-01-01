@@ -5637,7 +5637,7 @@ treeview.view radio:selected:disabled {
 
 .nautilus-window .floating-bar {
 
-  margin: 7.69px;
+  margin: 6px;
   padding: 1px;
   background-color: @color_600;
   color: @text_color_2;
