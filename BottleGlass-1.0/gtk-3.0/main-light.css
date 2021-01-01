@@ -6967,7 +6967,16 @@ placessidebar.sidebar{
 }
 
 .nautilus-window notebook{
+  background-image: none;
+  padding-bottom: 6px;
   background-color: @nautilus_notebook_bg_color;
+  border-radius: 0 0 6px 0;
+}
+
+.nautilus-window notebook treeview {
+  background-color: @nautilus_notebook_bg_color;
+  padding-bottom: 6px;
+  border-radius: 0 0 6px 0;
 }
 
 .nautilus-window notebook > stack:not(:only-child) searchbar {
