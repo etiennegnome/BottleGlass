@@ -5627,6 +5627,11 @@ row.activatable:selected:hover {
 /*.tweak-titlebar-left:dir(ltr){
 }*/
 
+list#AutostartListBoxTweakGroup.tweak-group-startup row.tweak-startup {
+  background-image: image(@global_bg_color);
+  background-color: transparent;
+}
+
 /*(((((((((( App Notifications ))))))))))*/
 
 .app-notification, 
