@@ -3458,12 +3458,11 @@ menubar .csd.popup decoration,
 menu, 
 .menu, 
 .context-menu { 
-  border-radius:5px ; 
-  margin: 5px; /*0.275 rem;*/
-  padding: 5px 0; /*0.275 rem 0; */
-  background-color: transparent;
-  /*background-image: linear-gradient(to bottom left,alpha(@mp_bg_color_1,0.88),alpha(@mp_bg_color_3,0.88),alpha(@mp_bg_color_2,0.88),alpha(@mp_bg_color_1,0.88),alpha(@mp_bg_color_3,0.88),alpha(@mp_bg_color_1,0.88));*/
-  background-image: url("graphics/blurred6.png"),linear-gradient(to bottom left,@mp_bg_color_1,@mp_bg_color_3,@mp_bg_color_2,@mp_bg_color_1,@mp_bg_color_3,@mp_bg_color_1); 
+  border-radius:5px ;
+  margin: 5px;
+  padding: 5px 0;
+  background-color: @menu_popover_bg_color; /*transparent;*/
+  background-image: url("graphics/blurred6.png"),linear-gradient(to bottom left,alpha(@mp_bg_color_1,0.88),alpha(@mp_bg_color_3,0.88),alpha(@mp_bg_color_2,0.88),alpha(@mp_bg_color_1,0.88),alpha(@mp_bg_color_3,0.88),alpha(@mp_bg_color_1,0.88));
   background-size: cover;
 }
 
@@ -3481,7 +3480,7 @@ menubar > menuitem menu menu,
 
 .csd menu, 
 .csd .menu, 
-.csd .context-menu { 
+.csd .context-menu {
   border: 1px solid #cdcdcd; /*shade(@menu_popover_bg_color,0.88);*/
 }
 
@@ -3666,8 +3665,6 @@ popover{
   padding: 1px;
   border-radius: 5px; /*0.5205rem;*/
   background-color: @menu_popover_bg_color;
-
-  /*background-image: linear-gradient(to bottom left,alpha(@mp_bg_color_1,0.88),alpha(@mp_bg_color_3,0.88),alpha(@mp_bg_color_2,0.88),alpha(@mp_bg_color_1,0.88),alpha(@mp_bg_color_3,0.88),alpha(@mp_bg_color_1,0.88));*/
   background-image: url("graphics/blurred6.png"),linear-gradient(to bottom left,@mp_bg_color_1,@mp_bg_color_3,@mp_bg_color_2,@mp_bg_color_1,@mp_bg_color_3,@mp_bg_color_1);
   background-size: cover;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -6734,8 +6731,13 @@ window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal 
 
 window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:disabled,
 window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.small-button.sidebar-button:disabled {
+  color: alpha(rgba(40, 32, 32, 0.8),0.6);
+}
 
-  color: alpha(rgba(40, 32, 32, 0.8),0.6); }
+window.background:not(.csd) > menu,
+window.background:not(.csd) > menu > menu{
+  border-radius: 0;
+}
 
 /*window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack > list {
 

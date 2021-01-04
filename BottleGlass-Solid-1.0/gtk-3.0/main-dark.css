@@ -4392,12 +4392,10 @@ menubar .csd.popup decoration,
 menu, 
 .menu, 
 .context-menu { 
-  border-radius:5px ; 
-  margin: 5px; /*0.275 rem;*/
-  padding: 5px 0; /*0.275 rem 0; */
-  background-color: transparent;
-  /*background-image: url("graphics/blurredT.png"),linear-gradient(to bottom left,alpha(@sb_bg_color_3,0.93),alpha(@sb_bg_color_2,0.93),alpha(@sb_bg_color_1,0.93),alpha(@sb_bg_color_2,0.93));*/
-  /*background-image: linear-gradient(to bottom left,alpha(@mp_bg_color_3,0.94),alpha(@mp_bg_color_2,0.94),alpha(@mp_bg_color_1,0.94),alpha(@mp_bg_color_2,0.94));*/
+  border-radius:5px ;
+  margin: 5px;
+  padding: 5px 0;
+  background-color: @menu_popover_bg_color; /*transparent;*/
   background-image: url("graphics/blurredT.png"),linear-gradient(to bottom left,@mp_bg_color_3,@mp_bg_color_2,@mp_bg_color_1,@mp_bg_color_2);
   background-size: cover;
 }
@@ -4643,10 +4641,8 @@ popover{
   padding: 1px;
   border-radius: 5px; /*0.5205rem;*/
   background-color: @menu_popover_bg_color;
-  background-size: cover;
-  /*background-image: url("graphics/blurredT.png"),linear-gradient(to bottom left,alpha(@sb_bg_color_3,0.93),alpha(@sb_bg_color_2,0.93),alpha(@sb_bg_color_1,0.93),alpha(@sb_bg_color_2,0.93));*/
-  /*background-image: linear-gradient(to bottom left,alpha(@mp_bg_color_3,0.96),alpha(@mp_bg_color_2,0.96),alpha(@mp_bg_color_1,0.96),alpha(@mp_bg_color_2,0.96));*/
   background-image: url("graphics/blurredT.png"),linear-gradient(to bottom left,@mp_bg_color_3,@mp_bg_color_2,@mp_bg_color_1,@mp_bg_color_2);
+  background-size: cover;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.30); /*shade(@menu_popover_bg_color,0.88);*/
 }
@@ -7978,6 +7974,11 @@ window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal 
 
 window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:disabled, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.small-button.sidebar-button:disabled {
   color: #505050;
+}
+
+window.background:not(.csd) > menu,
+window.background:not(.csd) > menu > menu{
+  border-radius: 0;
 }
 
 /*window.background.csd > box.horizontal > box.vertical > scrolledwindow.view > viewport.frame > stack > list {
